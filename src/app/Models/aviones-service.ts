@@ -5,7 +5,7 @@ export interface IService {
 
   createDato(avion: any): void;
 
-  updateDato(id: string): Promise<any>;
+  updateDato(dto: any): void;
 
   deleteDato(id: string): Promise<any>;
 }

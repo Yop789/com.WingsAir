@@ -28,8 +28,17 @@ export class AvionesService implements IService {
       }
     );
   }
-  updateDato(id: string): Promise<any> {
-    return this.http.put(this.url + '/' + id, {}).toPromise();
+  updateDato(dto: any): void {
+    this.http.put(this.url, dto).subscribe(
+      (data) => {
+        if (data) {
+          this.alet.alertaSuccess('/aviones', 'Avion actualizado con exito');
+        }
+      },
+      (err) => {
+        this.alet.alertaError('Error al actualizar el avion');
+      }
+    );
   }
   deleteDato(id: string): Promise<any> {
     return this.http.delete(this.url + '/' + id).toPromise();

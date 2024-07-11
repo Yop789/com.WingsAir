@@ -34,7 +34,7 @@
 
     <div class="form-group">
       <label for="">Capacidad de pasajeros</label>
-      <input type="text" class="form-control" #capacidadPasajero />
+      <input type="number" class="form-control" #capacidadPasajero />
       <span *ngIf="submitted && !capacidadPasajero.value" class="text-danger"
         >Capacidad de pasajeros es requerido</span
       >
@@ -42,7 +42,7 @@
 
     <div class="form-group mt-3">
       <button class="btn btn-info" (click)="guardar()">Guardar</button>
-      <a class="btn m-1" [routerLink]="['/usuarios']">Volver</a>
+      <a class="btn m-1" [routerLink]="['/aviones']">Volver</a>
     </div>
   </div>
 </div>

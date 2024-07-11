@@ -38,11 +38,12 @@ export class RegistrarAvionComponent {
       this.capacidadPasajero.nativeElement.value
     ) {
       const dta: Avion = {
-        codigoAvion: 'AV-' + this.capacidadPasajero.nativeElement.value,
+        codigoAvion: 'AV-' + this.codigoAvion.nativeElement.value,
         tipoAvion: this.tipoAvion.nativeElement.value,
         horasVuelo: '15:30',
-        capacidadPasajero: this.capacidadPasajero.nativeElement.value,
+        capacidadPasajeros: Number(this.capacidadPasajero.nativeElement.value),
       };
+      console.log(dta);
       this.sA.createDato(dta);
     }
   }

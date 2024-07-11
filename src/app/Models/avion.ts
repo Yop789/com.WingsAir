@@ -11,5 +11,19 @@ export interface Avion {
   codigoAvion: string;
   tipoAvion: string;
   horasVuelo: string;
-  capacidadPasajero: number;
+  capacidadPasajeros: number;
+}
+
+export interface Avionid {
+  // private Long id;
+
+  // private String codigoAvion;
+  // private TipoAviones tipoAvion;
+  // private LocalTime horasVuelo;
+  // private int capacidadPasajero
+  id: number;
+  codigoAvion: string;
+  tipoAvion: string;
+  horasVuelo: string;
+  capacidadPasajeros: number;
 }
