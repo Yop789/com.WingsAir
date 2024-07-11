@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h2>Registras un nuevo Avion</h2>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="form-group">
+      <label for="">Seleciona un tipo de avion</label>
+      <select class="form-control" #tipoAvion>
+        <option>-----Selecciona un tipo de avion-----</option>
+        <option *ngFor="let item of tipo" value="{{ item }}">
+          {{ item }}
+        </option>
+      </select>
+      <span *ngIf="submitted && !tipoAvion.value" class="text-danger"
+        >Debes de seleccionar un tipo de avion es requerido</span
+      >
+    </div>
+    <div class="form-group">
+      <label for="">Código Avion AV-</label>
+      <input
+        type="text"
+        class="form-control"
+        #codigoAvion
+        maxlength="4"
+        placeholder="0000"
+      />
+      <span *ngIf="submitted && !codigoAvion.value" class="text-danger"
+        >Codigo de avion es requerido</span
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="">Capacidad de pasajeros</label>
+      <input type="text" class="form-control" #capacidadPasajero />
+      <span *ngIf="submitted && !capacidadPasajero.value" class="text-danger"
+        >Capacidad de pasajeros es requerido</span
+      >
+    </div>
+
+    <div class="form-group mt-3">
+      <button class="btn btn-info" (click)="guardar()">Guardar</button>
+      <a class="btn m-1" [routerLink]="['/usuarios']">Volver</a>
+    </div>
+  </div>
+</div>
