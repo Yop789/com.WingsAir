@@ -1,34 +1,34 @@
 <div class="container">
     <div class="card">
       <div class="card-header">
-        Detalles del Avión
+        Detalles del Piloto
       </div>
       <div class="card-body">
         <div class="table-responsive">
           <table class="table table-bordered">
             <tbody>
               <tr>
-                <th>Tipo de Avión</th>
-                <td>{{ data.tipoAvion }}</td>
+                <th>Código Piloto</th>
+                <td>{{ data?.codigoPiloto }}</td>
               </tr>
               <tr>
-                <th>Código Avión</th>
-                <td>{{ data.codigoAvion }}</td>
+                <th>Nombre Completo</th>
+                <td>{{ data?.nombreCompleto }}</td>
               </tr>
               <tr>
-                <th>Capacidad de Pasajeros</th>
-                <td>{{ data.capacidadPasajeros }}</td>
+                <th>Género</th>
+                <td>{{ data?.sexo }}</td>
               </tr>
               <tr>
                 <th>Horas de Vuelo</th>
-                <td>{{ data.horasVuelo }}</td>
+                <td>{{ data?.horasVuelo }}</td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
       <div class="card-footer">
-        <a class="btn btn-info" [routerLink]="['/aviones']">Volver</a>
+        <a class="btn btn-info" [routerLink]="['/pilotos']">Volver</a>
       </div>
     </div>
   </div>

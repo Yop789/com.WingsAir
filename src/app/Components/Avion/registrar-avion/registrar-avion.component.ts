@@ -40,7 +40,7 @@ export class RegistrarAvionComponent {
       const dta: Avion = {
         codigoAvion: 'AV-' + this.codigoAvion.nativeElement.value,
         tipoAvion: this.tipoAvion.nativeElement.value,
-        horasVuelo: '15:30',
+        horasVuelo: '00:00',
         capacidadPasajeros: Number(this.capacidadPasajero.nativeElement.value),
       };
       console.log(dta);

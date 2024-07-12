@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2>Registras un Areopuerto</h2>
+      </div>
+    </div>
+  
+    <div class="row mb-2">
+
+        <div class="form-group">
+            <label for="">Codigo de Aeropuerto</label>
+            <input type="number" class="form-control" #codigo />
+            <span *ngIf="submitted && !codigo.value" class="text-danger"
+              >Codigo es requerido</span
+            >
+          </div>
+          <div class="form-group">
+            <label for="">Nombre del Aeropuerto</label>
+            <input type="number" class="form-control" #nombre />
+            <span *ngIf="submitted && !nombre.value" class="text-danger"
+              >Nombre es requerido</span
+            >
+          </div>
+          <div class="form-group">
+            <label for="">Municipio del Aeropuerto</label>
+            <input type="number" class="form-control" #municipio />
+            <span *ngIf="submitted && !municipio.value" class="text-danger"
+              >Codigo es requerido</span
+            >
+          </div>
+          <div class="form-group">
+            <label for="">Estado del Aeropuerto </label>
+            <input type="number" class="form-control" #estado />
+            <span *ngIf="submitted && !estado.value" class="text-danger"
+              >Estado es requerido</span
+            >
+          </div>
+          <div class="form-group">
+            <label for="">Pais del Aeropuerto</label>
+            <input type="number" class="form-control" #pais />
+            <span *ngIf="submitted && !pais.value" class="text-danger"
+              >Codigo es requerido</span
+            >
+          </div>
+      
+  
+      <div class="form-group mt-3">
+        <button class="btn btn-info" (click)="guardar()">Guardar</button>
+        <a class="btn m-1" [routerLink]="['/aviones']">Volver</a>
+      </div>
+    </div>
+  </div>
+  
